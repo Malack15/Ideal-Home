@@ -147,6 +147,27 @@ a
     border: none;
     outline: none;
     border-bottom: 1.5px solid #aaaaaa;
+    padding: 0 30px;
+    color: #333;
+}
+.input_box i
+{
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input_box i.email,
+.input_box i.password
+{
+    left: 20px;
+    color: #707070;
+
+}
+.input_box i.pw_hide
+{
+    right:0;
+    font-size: 18px;
 }
 .option_field
 {
