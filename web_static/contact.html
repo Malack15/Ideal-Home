@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Ideal Home Project</title>
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
-    <header class="header1">
-        <nav class="nav1">
-            <ul class="nav_items1">
-                <li class="nav_items1">
-                    <a href="home.html" class="nav_link1">Home</a>
-                </li>
-            </ul>
-        </nav>
-      </header>
+    <!-- Header, Cover Section, Smart Home Features, Services, About Section, etc. -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ideal Home. All rights reserved.</p>
+    </footer>
+
+    <script src="script5.js"></script>
 </body>
 </html>

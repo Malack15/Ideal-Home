@@ -1,51 +1,58 @@
-*
-{
-	padding:0;
-	margin:0;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
-body
-{
-    background: wheat;
 
+/* Header, Cover Section, Smart Home Features, Services, About Section, etc. */
+
+/* Contact Section */
+#contact {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
 }
-.header1
-{
-    position: fixed;
-    height: 80px;
-    width: 100%;
-    z-index: 100;
-    padding: 0 20px;
+
+#contact h2 {
+    text-align: center;
 }
-a
-{
-    text-decoration: none;
-}
-.nav1
-{
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-}
-.nav_link1
-{
-    color: black;
-    font-size: 20px;
-}
-.nav1, .nav_items1
-{
+
+#contactForm {
     display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+#contactForm label {
+    margin-top: 1rem;
 }
-.nav_items1
-{
-    column-gap: 100px;
+
+#contactForm input, #contactForm textarea, #contactForm button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
-.nav_link1:hover
-{
-    color:orangered;
+
+#contactForm button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: #45a049;
+}
+
+#formMessage {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
