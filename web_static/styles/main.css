@@ -228,3 +228,49 @@ a
     opacity: 0.7;
     cursor: pointer;
 }
+.container1 .services {
+	width: 100%;
+	position: relative;
+	display: block;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+    color: red;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    background-color: transparent;
+    margin-top: 5rem; /* To prevent overlap with fixed header */
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Services section styles */
+.service {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.service h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.service p {
+    margin: 0.5rem 0;
+}
+
+.testimonial {
+    font-style: italic;
+    color: #555;
+}
