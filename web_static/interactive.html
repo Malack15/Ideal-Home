@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Home Customization Tool</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+    </header>
+    
+    <section class="cover">
+        <img src="cover-image.jpg" alt="Cover Image" class="cover-image">
+        <div class="cover-text">
+            <h1>Interactive Home Customization Tool</h1>
+            <p>Create and visualize your ideal home layout in real-time.</p>
+            <a href="#customization-tool" class="project-button">Get Started</a>
+        </div>
+    </section>
+    
+    <main>
+        <section id="customization-tool">
+            <h2>3D Home Design Tool</h2>
+            <div class="toolbar">
+                <label for="wallColor">Wall Color:</label>
+                <input type="color" id="wallColor" name="wallColor" value="#ffffff">
+                <button id="addChair">Add Chair</button>
+                <button id="addTable">Add Table</button>
+            </div>
+            <div id="room">
+                <div id="walls"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Ideal Home. All rights reserved.</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

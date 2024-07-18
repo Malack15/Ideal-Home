@@ -1,12 +1,32 @@
-*
-{
-	padding:0;
-	margin:0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+/* Feature section styles */
+#features {
+    margin-top: 2rem;
 }
-body
-{
-    background: gray;
 
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
 }
