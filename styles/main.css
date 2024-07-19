@@ -238,20 +238,17 @@ a
 	z-index: 1;
     color: red;
 }
-
-/* Main content styles */
-main {
+.main {
     padding: 2rem;
     background-color: transparent;
-    margin-top: 5rem; /* To prevent overlap with fixed header */
+    margin-top: 5rem; 
 }
-
-section {
+.section 
+{
     margin-bottom: 2rem;
 }
-
-/* Services section styles */
-.service {
+.service 
+{
     margin-bottom: 2rem;
     padding: 1rem;
     background-color: white;
@@ -260,16 +257,13 @@ section {
     text-align: center;
     
 }
-
 .service h3 {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
-
 .service p {
     margin: 0.5rem 0;
 }
-
 .testimonial {
     font-style: italic;
     color: #555;
