@@ -157,10 +157,10 @@ a
     transform: translateY(-50%);
     font-size: 20px;
 }
-.input_box .i .email,
-.input_box .i .password
+.input_box, .i, .email,
+.input_box, .i, .password
 {
-    left: 0;
+    left: 22px;
     color: #707070;
 
 }
@@ -223,8 +223,8 @@ a
     position: absolute;
     top: 10px;
     right: 20px;
-    color: #0b0217;
-    font-size: 22px;
+    color: red;
+    font-size: 15px;
     opacity: 0.7;
     cursor: pointer;
 }
