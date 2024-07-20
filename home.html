@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="images/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 <body>
   <header class="header">
@@ -14,93 +15,57 @@
         <a href="#" class="nav_logo">Ideal Home</a>
         <ul class="nav_items">
             <li class="nav_items">
-                <a href="index.html" class="nav_link"> <i class="fa-solid fa-house"></i>Home</a>
-                <a href="aboutus.html" class="nav_link"><i class="fa-regular fa-address-card"></i>About Us</a>
-                <a href="features.html" class="nav_link"><i class="fa-solid fa-toolbox"></i>Features</a>
-                <a href="contact.html" class="nav_link"><i class="fa-solid fa-phone"></i>Contact</a>
+                <a href="home.html" class="nav_link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="aboutus.html" class="nav_link"><i class="fa-regular fa-address-card"></i> About Us</a>
+                <a href="features.html" class="nav_link"><i class="fa-solid fa-toolbox"></i> Features</a>
+                <a href="contact.html" class="nav_link"><i class="fa-solid fa-phone"></i> Contact</a>
             </li>
         </ul>
-      <button class="button" id="form-open">Login</button>  
+      <button class="button" id="form-open" onclick="location.href='login.html'">Login</button>  
     </nav>
   </header>
-   <section class="home">
-    <div class="form_container">
-      <i class="fa-solid fa-x form_close"></i>
-      <div class="login_form">
-        <form action="#">
-          <h2>Login</h2>
-          <div class="input_box">
-            <input type="email" placeholder="Enter your email" required>
-            <i class="fa-regular fa-envelope email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Enter your password" required>
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-regular fa-eye-slash pw_hide"></i>
-          </div>
-          <div class="option_field">
-            <span class="checkbox">
-              <input type="checkbox" id="check">
-              <label for="check">Remember me</label>
-            </span>
-            <a href="" class="forgot_pwd">Forgot Password?</a>
-          </div>
-          <button class="button">Login Now</button>
-          <div class="sign_up">
-            Don`t have an account <a href="#" id="signup">Signup</a>
-          </div>
-        </form>
-      </div>
-      <div class="form signup_form">
-        <form action="#">
-          <h2>Signup</h2>
-          <div class="input_box">
-            <input type="email" placeholder="Enter your email" required>
-            <i class="fa-regular fa-envelope email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Create password" required>
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-regular fa-eye-slash pw_hide"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Confirm password" required>
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-regular fa-eye-slash"></i>
-          </div>
-          
-          <button class="button">Signup Now</button>
-          <div class="sign_up">Already have an account <a href="#" id="login">Login</a>
-          </div>
-        </form>
-      </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Ideal Home</h1>
+        <p>Your dream home awaits.</p>
+        <a href="features.html" class="btn-primary">Get Started</a>
     </div>
-   </section>
-   <script src="script.js"></script>
-   <main>
-    <div class="container1">
-      <section class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-          <h3>Home Renovation</h3>
-          <p class="testimonial">Transform your home with our expert renovation services. We offer a range of packages to suit your needs and budget.</p>
-          <p class="testimonial">"Amazing service! Our home looks brand new." - Jane Doe</p>
+</section>
+
+<section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-items">
+        <div class="feature-item">
+            <h3>Beautiful Designs</h3>
+            <p>Choose from a variety of stunning home designs.</p>
+            <p>At Ideal Home, we pride ourselves on creating beautiful and functional living spaces that cater to a variety of tastes and lifestyles. Our homes are designed with both aesthetics and practicality in mind, ensuring that every detail is thoughtfully considered.</p>
+            <p>Our design philosophy centers around the harmony of form and function. We believe that a home should not only look stunning but also enhance the quality of life of its occupants. This means incorporating features that make everyday living more convenient, comfortable, and enjoyable.</p>
+            <p>Each home we feature is a testament to our commitment to quality craftsmanship and innovative design. From the use of high-quality materials to the integration of modern technologies, our homes are built to last and to inspire. Whether you prefer a classic, timeless style or a more contemporary, avant-garde aesthetic, we have a home that will suit your taste.</p>
+            <p>In addition to their beauty, our homes are also environmentally conscious. We strive to incorporate sustainable practices and materials in our construction process, ensuring that our homes are as eco-friendly as they are elegant. This commitment to sustainability not only benefits the environment but also results in homes that are more energy-efficient and cost-effective to maintain.</p>
+            <p>We invite you to explore our collection of beautifully designed homes and discover the perfect space for you and your family. Let us help you find a home that not only meets your needs but also exceeds your expectations.</p>
         </div>
-        <div class="service">
-          <h3>Interior Design</h3>
-          <img src="images/interrior.jpg" alt="Interior Design" class="service-image">
-          <p class="testimonial">Enhance the beauty of your home with our professional interior design services. Choose from various styles and themes.</p>
-          <p class="testimonial">"The designers were fantastic and understood our vision perfectly." - John Smith</p>
+        <div class="feature-item">
+            <h3>Quality Construction</h3>
+            <p>Built with the highest standards of quality.</p>
         </div>
-        <div class="service">
-          <img src="images/landscaping.jpg" alt="Landscaping" class="service-image">
-          <h3>Landscaping</h3>
-          <p class="testimonial">Upgrade your outdoor space with our comprehensive landscaping services. From garden design to maintenance, we've got you covered.</p>
-          <p class="testimonial">"Our garden has never looked better. Highly recommend!" - Emily Davis</p>
-      </div>
-      </section>
-      
+        <div class="feature-item">
+            <h3>Affordable Prices</h3>
+            <p>Find your perfect home within your budget.</p>
+        </div>
     </div>
-   </main>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Ideal Home will help provide a top-notch homes for you. Our mission is to help you find your dream home with ease and confidence.</p>
+</section>
+
+
+<footer>
+    <p>&copy; 2024 Ideal Home. All rights reserved.</p>
+</footer>
+   
 </body>
 </html>
