@@ -94,6 +94,15 @@ a
     border-radius: 6px;
     cursor: pointer;
 }
+
+.search
+{
+    padding: 6px 24px;
+    border: 2px solid black;
+    background: green;
+    border-radius: 6px;
+    cursor: pointer;
+}
 .button:active
 {
     transform: scale(0.98);
