@@ -38,7 +38,7 @@ document.getElementById('searchBar').addEventListener('keyup', (e)=>{
     const searchData = e.target.value.toLowercase();
     const filterData = categories.filter((item)=> {
         return(
-            item.title.toLocaleLowerCase().includes(seachData)
+            item.title.toLocaleLowerCase().includes(searchData)
         )
     })
     displayItem(filterData)
