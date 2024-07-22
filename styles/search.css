@@ -170,7 +170,3 @@ button
 button:hover{
     background-color: orangered;
 }
-::-webkit-scrollbar
-{
-    display: none;
-}
