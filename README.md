@@ -29,3 +29,4 @@ About Section
 Project Inspiration: A personal story about what inspired the project.
 Team Member Links: Links to each team member’s LinkedIn, GitHub, and Twitter profiles.
 GitHub Repository Link: A link to the GitHub repository for the project.
+Team members: 1;Martin Nyagaya 2; Malack Okiega
