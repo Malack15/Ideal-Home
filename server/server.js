@@ -32,3 +32,12 @@ mongoose.connect(process.env.MONGO_URI, {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// server.js (Update error handling)
+app.get('/api/auth/profile', (req, res) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) return res.status(401).json({ error: 'Unauthorized' });
+
+  // Mock profile data
+  res.json({ username: 'john_doe', avatar: '/path-to-avatar.jpg' });
+});
+
