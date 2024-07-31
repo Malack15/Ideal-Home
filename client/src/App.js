@@ -1,43 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// client/src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/ProfilePage';
+import EditProfilePage from './pages/EditProfilePage';
+import Navbar from './components/Navbar';
+import './styles.css';
 
-const App = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      fetch('/api/auth/profile', {
-        headers: { 'Authorization': `Bearer ${token}` },
-      })
-      .then(res => res.json())
-      .then(data => setUser(data.user))
-      .catch(() => setUser(null));
-    }
-  }, []);
-
+function App() {
   return (
     <Router>
-      <Navbar user={user} />
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/login">
-          <LoginPage setUser={setUser} />
-        </Route>
-        <Route path="/signup">
-          <SignupPage setUser={setUser} />
-        </Route>
-        <Route path="/profile">
-          <ProfilePage user={user} setUser={setUser} />
-        </Route>
-      </Switch>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/profile/edit" element={<EditProfilePage />} />
+        </Routes>
+      </div>
     </Router>
   );
-};
+}
 
 export default App;
