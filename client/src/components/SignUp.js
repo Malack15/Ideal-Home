@@ -1,4 +1,5 @@
 // client/src/components/SignUp.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
@@ -23,8 +24,7 @@ const SignUp = () => {
 
     const data = await response.json();
     if (response.ok) {
-      localStorage.setItem('token', data.token);
-      navigate('/');
+      navigate('/login');
     } else {
       setError(data.msg);
     }

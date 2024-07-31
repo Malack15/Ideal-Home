@@ -1,57 +1,40 @@
+// client/src/pages/ProfilePage.js
+
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Updated from useHistory to useNavigate
+import axios from 'axios';
+import '../styles/ProfilePage.css';
 
-const ProfilePage = ({ user, setUser }) => {
-  const [username, setUsername] = useState(user.username);
-  const [email, setEmail] = useState(user.email);
-  const [password, setPassword] = useState('');
-  const history = useHistory();
+const ProfilePage = () => {
+  const [profile, setProfile] = useState(null);
+  const navigate = useNavigate(); // Updated from useHistory to useNavigate
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const token = localStorage.getItem('token');
-    const response = await fetch('/api/auth/update-profile', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-      body: JSON.stringify({ username, email, password }),
-    });
+  useEffect(() => {
+    // Replace with your API endpoint
+    axios.get('/api/profile')
+      .then(response => setProfile(response.data))
+      .catch(error => console.error('Error fetching profile data:', error));
+  }, []);
 
-    const data = await response.json();
-    if (response.ok) {
-      setUser(data.user);
-      history.push('/');
-    } else {
-      alert(data.message);
-    }
+  const handleLogout = () => {
+    // Replace with your API endpoint
+    axios.post('/api/logout')
+      .then(() => {
+        // Perform any additional logout steps if needed
+        navigate('/login'); // Updated from history.push to navigate
+      })
+      .catch(error => console.error('Error logging out:', error));
   };
 
+  if (!profile) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div>
-      <h2>Edit Profile</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Username:</label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>New Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Update Profile</button>
-      </form>
+    <div className="profile-page">
+      <h1>Welcome, {profile.name}</h1>
+      <p>Email: {profile.email}</p>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };
