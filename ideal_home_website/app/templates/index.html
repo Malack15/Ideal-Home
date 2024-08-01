@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ideal Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Ideal Home</h1>
+        <nav>
+            <a href="{{ url_for('routes.index') }}">Home</a>
+            <a href="{{ url_for('routes.edit_profile') }}">Profile</a>
+            <a href="{{ url_for('routes.logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Home Page</h2>
+        <p>Welcome to your Ideal Home dashboard!</p>
+    </main>
+</body>
+</html>
